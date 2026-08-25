@@ -1,8 +1,8 @@
-export function Intervalo_Valido(função, a, b){
-    função(a)
-    função(b)
-    // Deve ser um valor negativo e um valor positivo para ser um intervalo valido
-    return a * b < 0
+export function Intervalo_Valido(função, a, b) {
+    const resultado_a = função(a)
+    const resultado_b = função(b)
+    console.log()
+    return resultado_a * resultado_b < 0
 }
 
 export default {
