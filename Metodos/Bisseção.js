@@ -48,7 +48,7 @@ export function total_interações(a, b, erro) {
     if (erro <= 0) {
         return "Erro invalido"
     }
-    // Evita retornar menos de 0 iterações para nõ ter problema no for
+    // Evita retornar menos de 0 iterações para não ter problema no for
     return Math.max(0, Math.ceil(Math.log2(Math.abs(b - a) / erro))
     );
 }
