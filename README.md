@@ -8,6 +8,21 @@ O objetivo é registrar os métodos estudados ao longo da disciplina, incluindo 
 
 - **JavaScript:** implementação da lógica dos métodos numéricos.
 - **HTML:** criação das interfaces visuais para interação e apresentação dos resultados.
+- **Math.js:** biblioteca utilizada para operações e expressões matemáticas.
+
+## Instalação
+
+Após clonar o repositório, instale as dependências do projeto, incluindo o Math.js:
+
+```bash
+npm install
+```
+
+Para instalar somente o Math.js em um projeto que ainda não possui a dependência:
+
+```bash
+npm install mathjs
+```
 
 ## Padrão de retorno das funções
 
@@ -67,6 +82,26 @@ Ao utilizar os arquivos diretamente no HTML, o script responsável pela importa�
 ```
 
 ## Teste pelo terminal
+
+Para executar os testes de todos os métodos:
+
+```bash
+npm run testes
+```
+
+Também é possível usar o atalho padrão do npm:
+
+```bash
+npm test
+```
+
+Para testar somente um método, informe `Bissecao`, `Newton` ou `Auxiliares`:
+
+```bash
+npm run teste -- Newton
+npm run teste -- Bissecao
+npm run teste -- Auxiliares
+```
 
 O arquivo `teste.js` contém uma área inicial para informar a função, os limites `a` e `b` e o erro aceito:
 

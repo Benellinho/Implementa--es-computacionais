@@ -1,6 +1,11 @@
 {
   "type": "module",
   "scripts": {
-    "test": "node teste.js"
+    "test": "node testes/executar.js",
+    "testes": "node testes/executar.js",
+    "teste": "node testes/executar.js"
+  },
+  "dependencies": {
+    "mathjs": "^15.2.0"
   }
 }
