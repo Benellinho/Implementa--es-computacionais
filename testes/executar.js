@@ -1,6 +1,7 @@
 const arquivos = {
     bissecao: "./Bissecao.test.js",
     newton: "./Newton.test.js",
+    secantes: "./Secantes.test.js",
     auxiliares: "./Auxiliares.test.js"
 };
 
