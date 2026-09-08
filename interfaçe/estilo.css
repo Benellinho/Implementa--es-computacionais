@@ -1,0 +1,431 @@
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #233c37;
+    background: #f4f5f0;
+    font-synthesis: none
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+header,
+main,
+footer {
+    max-width: 1160px;
+    margin: auto
+}
+
+header {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dce2da
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 650
+}
+
+.simbolo {
+    background: #214d40;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    text-align: center;
+    font: italic 29px Georgia
+}
+
+.disciplina,
+footer {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #65746b
+}
+
+.disciplina span {
+    margin: 0 12px;
+    color: #b7c2b5
+}
+
+.intro {
+    padding: 48px 0 32px;
+    max-width: 700px
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 2px;
+    color: #597961
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 49px;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    margin: 18px 0
+}
+
+p {
+    line-height: 1.65
+}
+
+.intro>p:last-child {
+    color: #6b786f;
+    font-size: 14px;
+    max-width: 530px
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1.12fr;
+    gap: 22px
+}
+
+.painel {
+    background: #fff;
+    border: 1px solid #dce3d9;
+    border-radius: 16px;
+    padding: 28px
+}
+
+.section-title {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 26px
+}
+
+h2 {
+    font-size: 16px;
+    margin: 0
+}
+
+.numero {
+    font-size: 11px;
+    color: #68806e;
+    border: 1px solid #dce3d9;
+    border-radius: 50%;
+    padding: 7px
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 650;
+    margin: 19px 0 8px
+}
+
+input,
+select {
+    width: 100%;
+    font: inherit;
+    font-size: 14px;
+    border: 1px solid #cfd8cd;
+    background: #fcfdfb;
+    padding: 12px;
+    border-radius: 7px;
+    color: #233c37
+}
+
+#expressao {
+    font-family: monospace;
+    font-size: 18px
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+    outline: 3px solid #b7d2a3;
+    outline-offset: 2px
+}
+
+.ajuda {
+    font-size: 12px;
+    color: #718075;
+    margin: 9px 0
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px
+}
+
+.exemplos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin: 16px 0
+}
+
+.exemplos span {
+    font-size: 11px;
+    color: #718075;
+    margin-right: 4px
+}
+
+button {
+    cursor: pointer;
+    font: inherit
+}
+
+.exemplos button {
+    border: 1px solid #e1e6dc;
+    background: #f5f7f0;
+    color: #4e6957;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 11px
+}
+
+.primario {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 7px;
+    color: white;
+    background: #285540;
+    font-weight: 600;
+    font-size: 14px
+}
+
+.primario:hover {
+    background: #193f2e
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: wait
+}
+
+#vazio {
+    text-align: center;
+    padding: 85px 0;
+    color: #738074
+}
+
+#vazio h3 {
+    font-size: 17px;
+    color: #3d5746;
+    font-weight: 500
+}
+
+#vazio p {
+    font-size: 13px
+}
+
+.decoracao {
+    font: italic 48px Georgia;
+    color: #8da084;
+    margin-bottom: 32px
+}
+
+.status {
+    padding: 15px;
+    background: #eff4e9;
+    border-left: 3px solid #688d4d;
+    font-size: 14px
+}
+
+.status.erro {
+    background: #fff1e9;
+    border-color: #b9744e;
+    color: #804729
+}
+
+.metricas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 22px 0
+}
+
+.metrica {
+    padding: 17px;
+    background: #f7f8f4;
+    border-radius: 8px;
+    overflow-wrap: anywhere
+}
+
+.metrica span {
+    display: block;
+    font-size: 11px;
+    color: #74806f;
+    margin-bottom: 10px
+}
+
+.metrica strong {
+    font: 20px ui-monospace, monospace
+}
+
+details {
+    margin-top: 25px
+}
+
+summary {
+    font-size: 12px;
+    color: #61715f;
+    cursor: pointer
+}
+
+pre {
+    font-size: 12px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    background: #f7f8f4;
+    padding: 16px;
+    border-radius: 8px
+}
+
+.secundario {
+    border: 1px solid #cfd8cd;
+    padding: 9px 13px;
+    background: white;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #3e5f47;
+    margin-top: 12px
+}
+
+.autoria {
+    display: flex;
+    gap: 24px;
+    padding: 22px 0;
+    margin: 18px 0 24px;
+    color: #72806f;
+    font-size: 12px
+}
+
+.autoria strong {
+    white-space: nowrap;
+    padding-top: 2px;
+    color: #4a644e
+}
+
+.autoria p {
+    margin: 0;
+    max-width: 810px
+}
+
+code {
+    font-size: 12px
+}
+
+footer {
+    padding: 23px 0;
+    border-top: 1px solid #dce2da;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px
+}
+
+[hidden] {
+    display: none !important
+}
+
+@media(max-width:1200px) {
+
+    header,
+    main,
+    footer {
+        margin-left: 24px;
+        margin-right: 24px
+    }
+}
+
+@media(max-width:720px) {
+    .workspace {
+        grid-template-columns: 1fr
+    }
+
+    h1 {
+        font-size: 37px
+    }
+
+    .intro {
+        padding-top: 30px
+    }
+
+    .painel {
+        padding: 22px
+    }
+
+    .disciplina {
+        font-size: 10px
+    }
+
+    .autoria {
+        display: block
+    }
+
+    .autoria p {
+        margin-top: 8px
+    }
+
+    footer {
+        gap: 15px
+    }
+
+    #vazio {
+        padding: 40px 0
+    }
+}
+
+@media print {
+    body {
+        background: white
+    }
+
+    header {
+        height: 60px
+    }
+
+    .intro {
+        padding: 12px 0
+    }
+
+    h1 {
+        font-size: 28px
+    }
+
+    .entrada,
+    .intro>p:last-child {
+        display: none
+    }
+
+    .workspace {
+        display: block
+    }
+
+    .saida {
+        break-inside: avoid
+    }
+
+    .autoria {
+        margin-bottom: 0
+    }
+
+    footer {
+        padding: 10px 0
+    }
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Métodos numéricos · Laboratório</title>
+  <!-- ESTILO -->
+</head>
+<body>
+  <header><a href="./index.html" class="marca"><span class="simbolo">ƒ</span> Métodos numéricos</a><span class="disciplina">UFSM <span> / </span> MTM224</span></header>
+  <main>
+    <div class="workspace">
+      <section class="painel entrada"><div class="section-title"><span class="numero">01</span><h2>Configure o cálculo</h2></div>
+        <form id="form">
+          <label for="metodo">Método numérico</label><select id="metodo"><option value="bissecao">Bisseção</option><option value="falsa">Falsa posição</option><option value="newton">Newton</option><option value="secantes">Secantes</option></select>
+          <p id="descricao" class="ajuda"></p>
+          <label for="expressao">Função f(x)</label><input id="expressao" value="x^2 - 2" maxlength="300" required spellcheck="false" aria-describedby="sintaxe">
+          <p class="ajuda" id="sintaxe">Use x^2, sin(x), cos(x), exp(x), log(x), sqrt(x), pi e e. Ângulos em radianos.</p>
+          <div class="exemplos"><span>Exemplos</span><button type="button" data-example="x^2 - 2">x² − 2</button><button type="button" data-example="cos(x) - x">cos(x) − x</button><button type="button" data-example="exp(x) - 2">eˣ − 2</button></div>
+          <div class="campos"><div><label id="label-a" for="a">Limite a</label><input id="a" type="number" step="any" value="0" required></div><div id="campo-b"><label id="label-b" for="b">Limite b</label><input id="b" type="number" step="any" value="2" required></div></div>
+          <label for="erro">Tolerância</label><input id="erro" type="number" step="any" min="0.000000000000001" value="0.00001" required>
+          <button class="primario" id="calcular" type="submit">Calcular raiz <span>→</span></button>
+        </form>
+      </section>
+      <section class="painel saida" aria-live="polite" aria-busy="false" id="saida"><div class="section-title"><span class="numero">02</span><h2>Resultado da execução</h2></div>
+        <div id="vazio"><p>Escolha um método e informe a função.<br>O retorno do seu código aparecerá aqui.</p></div>
+        <div id="resultado" hidden><p class="eyebrow" id="metodo-resultado"></p><p id="parametros" class="ajuda"></p><p id="mensagem" class="status"></p><div id="metricas" class="metricas"></div><details open><summary>Retorno original do método</summary><pre id="original"></pre></details></div>
+      </section>
+    </div>
+    <aside class="autoria"><strong>Sobre a autoria</strong><p>Interface visual e integração desenvolvidas com o Codex, isoladas na pasta <code>interfaçe</code>. Este HTML inclui uma cópia dos métodos de <code>Metodos</code>. A Falsa posição foi corrigida com o Codex; os demais algoritmos não foram alterados pelo Codex nesta entrega.</p></aside>
+  </main><footer>MTM224 · Métodos Numéricos Computacionais <span>UFSM / 2026</span></footer>
+<!-- SCRIPTS -->
+</body></html>
