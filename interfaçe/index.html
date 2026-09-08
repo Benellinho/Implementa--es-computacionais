@@ -396,6 +396,43 @@ footer {
     }
 }
 
+.guia-operacoes {
+    margin: 12px 0 16px;
+    padding: 12px;
+    border: 1px solid #dce3d9;
+    border-radius: 8px;
+    background: #f7f8f4;
+    font-size: 12px;
+}
+
+.guia-operacoes summary {
+    color: #285540;
+    font-weight: 650;
+}
+
+.guia-operacoes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    table-layout: fixed;
+}
+
+.guia-operacoes caption {
+    text-align: left;
+    color: #61715f;
+    padding-bottom: 8px;
+}
+
+.guia-operacoes th, .guia-operacoes td {
+    text-align: left;
+    vertical-align: top;
+    padding: 8px 4px;
+    border-bottom: 1px solid #dce3d9;
+    overflow-wrap: anywhere;
+}
+
+.guia-operacoes p:last-child { margin-bottom: 0; }
+
 @media print {
     body {
         background: white
@@ -433,7 +470,8 @@ footer {
     footer {
         padding: 10px 0
     }
-}</style>
+}
+</style>
 </head>
 <body>
   <header><a href="./index.html" class="marca"><span class="simbolo">ƒ</span> Métodos numéricos</a><span class="disciplina">UFSM <span> / </span> MTM224</span></header>
@@ -444,7 +482,30 @@ footer {
           <label for="metodo">Método numérico</label><select id="metodo"><option value="bissecao">Bisseção</option><option value="falsa">Falsa posição</option><option value="newton">Newton</option><option value="secantes">Secantes</option></select>
           <p id="descricao" class="ajuda"></p>
           <label for="expressao">Função f(x)</label><input id="expressao" value="x^2 - 2" maxlength="300" required spellcheck="false" aria-describedby="sintaxe">
-          <p class="ajuda" id="sintaxe">Use x^2, sin(x), cos(x), exp(x), log(x), sqrt(x), pi e e. Ângulos em radianos.</p>
+          <p class="ajuda" id="sintaxe">Digite apenas a expressão em <code>x</code>, sem escrever <code>f(x) =</code> ou <code>= 0</code>. Use <code>*</code> para multiplicar e ponto nos decimais, como <code>2.5*x</code>.</p>
+          <details class="guia-operacoes">
+            <summary>Como escrever as operações</summary>
+            <table>
+              <caption>Da notação matemática para o campo de função</caption>
+              <thead><tr><th scope="col">Operação</th><th scope="col">Digite assim</th></tr></thead>
+              <tbody>
+                <tr><td>Soma e subtração</td><td><code>x + 2</code> ou <code>x - 2</code></td></tr>
+                <tr><td>Multiplicação: 3x</td><td><code>3*x</code></td></tr>
+                <tr><td>Divisão: x/2</td><td><code>x/2</code></td></tr>
+                <tr><td>Fração com soma no numerador</td><td><code>(x + 1)/2</code></td></tr>
+                <tr><td>Potência: x² ou 2ˣ</td><td><code>x^2</code> ou <code>2^x</code></td></tr>
+                <tr><td>Raiz quadrada e cúbica</td><td><code>sqrt(x)</code> e <code>cbrt(x)</code></td></tr>
+                <tr><td>Exponencial: e²ˣ</td><td><code>exp(2*x)</code> ou <code>e^(2*x)</code></td></tr>
+                <tr><td>Logaritmo natural: ln(x)</td><td><code>log(x)</code></td></tr>
+                <tr><td>Logaritmo na base 10</td><td><code>log10(x)</code></td></tr>
+                <tr><td>Seno, cosseno e tangente</td><td><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code></td></tr>
+                <tr><td>Valor absoluto: |x|</td><td><code>abs(x)</code></td></tr>
+                <tr><td>Constantes π e Euler</td><td><code>pi</code> e <code>e</code></td></tr>
+              </tbody>
+            </table>
+            <p>Use parênteses para agrupar operações: <code>(x + 1)/(x - 2)</code>. As funções trigonométricas recebem ângulos em <strong>radianos</strong>: <code>sin(pi/2)</code> vale 1.</p>
+            <p><strong>Exemplo completo:</strong> para 4 cos(x) − e²ˣ = 0, digite <code>4*cos(x) - exp(2*x)</code>.</p>
+          </details>
           <div class="exemplos"><span>Exemplos</span><button type="button" data-example="x^2 - 2">x² − 2</button><button type="button" data-example="cos(x) - x">cos(x) − x</button><button type="button" data-example="exp(x) - 2">eˣ − 2</button></div>
           <div class="campos"><div><label id="label-a" for="a">Limite a</label><input id="a" type="number" step="any" value="0" required></div><div id="campo-b"><label id="label-b" for="b">Limite b</label><input id="b" type="number" step="any" value="2" required></div></div>
           <label for="erro">Tolerância</label><input id="erro" type="number" step="any" min="0.000000000000001" value="0.00001" required>
